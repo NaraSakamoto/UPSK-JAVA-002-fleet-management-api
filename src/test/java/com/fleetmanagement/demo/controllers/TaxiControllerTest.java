@@ -53,9 +53,6 @@ public class TaxiControllerTest {
         taxi.setPlate("ABC-1234");
         taxi.setId(1234);
 
-//        ArrayList<TaxiModel> taxiList = new ArrayList<>();
-//        taxiList.add(taxi);
-
         Page<TaxiModel> page = new PageImpl<>(List.of(taxi));
 
         Mockito.when(taxiRepository.findAll(ArgumentMatchers.any(Pageable.class))).thenReturn(page);
